@@ -1,0 +1,5 @@
+= simple_form_for :graph, url: '/graphs/new_stock', method: :post do |f|
+  = f.input :stock_symbol
+  = f.input :start_date
+  = f.input :end_date
+  = f.button :submit
