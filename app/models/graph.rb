@@ -13,4 +13,12 @@ class Graph < ActiveRecord::Base
   def end_date=(date)
     @end_date = Date.parse(date)
   end
+  
+  def allocate_variables
+    @dates = []
+    @historical_data.each do |array|
+      @dates << array[1]
+    end
+    @dates
+  end
 end

@@ -45,4 +45,6 @@ gem 'binding_of_caller'
 gem 'simple_form'
 gem 'nas-yahoo_stock'
 
+gem "highcharts-rails", "~> 3.0.0"
+gem 'highstock-rails'
 

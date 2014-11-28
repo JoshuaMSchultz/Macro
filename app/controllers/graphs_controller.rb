@@ -1,19 +1,15 @@
 require 'yahoo_stock'
+
 class GraphsController < ApplicationController
   
   def stock
-    @historical_data
+    allocate_variables
+    @dates
   end
   
   def new_stock
-    
     @historical_data = Graph.new(stock_params).historical_data
     render :stock
-    # if  @historical_data.save
- #      render :stock, notice: "Chart updated"
- #    else
- #      render :stock, notice: "Something is wrong"
- #    end
   end
   
   
